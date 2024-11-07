@@ -1,0 +1,236 @@
+body {
+  margin-top: 8%;
+  background-color: #13161C;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* CONTENEDOR */
+.container {
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 30px;
+  width: 400px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 5px 5px rgb(255, 255, 255);
+}
+
+/* FORMULARIO */
+.form-group {
+  margin-top: 20px;
+  width: 350px;
+  padding: 10px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  display: flex;
+}
+
+/* TEXTO DEL INICIO */
+h3 {
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+
+/* BOTON */
+.btn {
+  width: 300px;
+  margin-bottom: 20px;  
+}
+
+/* MENSAJE DE ERORR */
+.error {
+  color: rgb(255, 0, 0);
+  left: 2px;
+  font-size: 14px;
+  position: absolute;
+  bottom: auto;
+}
+
+/* NO SE QUE HACE ESTO NO LO VEO POR NINGUNA PARTE */
+.t {
+  border-radius: 30px;
+  width: 330px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MARGIN QUE TIENE EL BOTON */
+button {
+  margin-top: 20px;
+}
+
+/* CONTENEDOR DE LA IMAGEN */
+fieldset .j {
+  display: flex;
+  justify-content: center;
+  margin-top: -100px;
+  margin-bottom: 20px;
+}
+
+/* IMAGEN DE USUARIO */
+.g { 
+  height: 150px;
+  width: 150px;
+
+}
+
+/* CONTENEDOR DE LOS INPUTS LABEL Y SPAN */
+.input-container {
+  height: 50px;
+  position: relative;
+  width: 100%;
+}
+
+/* MARGIN QUE TIENE EL INPUT DE USUARIO */
+.ic1 {
+  margin-top: 40px;
+}
+
+/* MARGIN DEL INPUT DE CONTRASEÑA */
+.ic2 {
+  margin-top: 50px;
+}
+
+/* INPUTS */
+.form-control-input {
+  border: none;
+  border-bottom: 2px solid white;
+  border-radius: 0;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 4px 20px 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* LABELS */
+.form-control-label {
+  background-color: transparent;
+  color: white;
+}
+
+/* DIV QUE CONTIENE EL LABEL DESPUES DE SELECIONARLO Y LLENARLO */
+.cut {
+  background-color: #15172b00;
+  border-radius: 10px;
+  height: 20px;
+  left: 8px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 70px;
+}
+
+
+/* LO MISMO PERO PARA LA CONTASEÑA */
+.cut-short {
+  background-color: #15172b00;
+  border-radius: 10px;
+  height: 20px;
+  left: 8px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 90px;
+}
+
+/* ESTO MUESTRA EL DIV CUT  */
+.form-control-input:focus~.cut,
+.form-control-input:not(:placeholder-shown)~.cut {
+  transform: translateY(10px);
+  background-color: #13161C;
+}
+
+/* CLASE DE LOS LABEL */
+.placeholder {
+  left: 20px;
+  line-height: 14px;
+  font-family: 'Montserrat', sans-serif;  
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 500ms, color 500ms;
+  top: 20px;
+}
+
+/* ESTO ES PARA MOVER EL LABEL A LA POSICION QUE DICE ABAJO */
+.form-control-input:focus~.placeholder,
+.form-control-input:not(:placeholder-shown)~.placeholder {
+  transform: translateY(-18px) translateX(10px) scale(0.75);
+}
+
+/* EL COLOR FINAL DEL LABEL CUANDO EL INPUT NO ESTA SELECIONADO */
+.form-control-input:not(:placeholder-shown)~.placeholder {
+  color: #ffffff;
+}
+
+/* COLOR CUANDO ESTA SELECIONADO EL INPUT */
+.form-control-input:focus~.placeholder {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* BORDER QUE APARECE CUANDO ESTA RELLENADO EL INPUT  */
+.form-control-input:not(:placeholder-shown).form-control-input {
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+}
+
+/* COLOR DEL BORDER CUANDO ESTA SELECIONADO EL INPUT */
+.form-control-input:focus {
+  border: 1px solid #0AE98A;
+  border-radius: 10px;
+}
+
+/* TAMPOCO SE PARA QEU SIRVE :P */
+.form-control-input:-webkit-autofill {
+  background-color: rgb(255, 255, 255);
+  -webkit-text-fill-color: white;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Linea de registro */
+
+.linea-registro {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.linea-registro::after, .linea-registro::before {
+  content: "";
+  flex: 1;
+  border-bottom: 1.5px solid #2D323A;
+}
+
+.linea-registro:not(:empty)::after {
+  margin-left: 10px;
+}
+
+.linea-registro:not(:empty)::before {
+  margin-right: 10px;
+}
+
+.linea-registro span {
+  color: white;
+  font-size: 14px;
+}
+
+.acepto {
+  color: #fff;
+}
+
