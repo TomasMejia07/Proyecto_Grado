@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -13,6 +13,18 @@ def correo():
 @app.route('/hub/user')
 def user():
     return render_template("registration/user.html")
+
+@app.route('/recuperacion')
+def recuperarContraseñaCorreo():
+    return render_template("recuperacion/RecuperaC_correo.html")
+
+@app.route('/recuperacion/codigo')
+def recuperarContraseñaCodigo():
+    return render_template("recuperacion/RecuperaC_Codigo.html")
+
+@app.route('/recuperacion/recuperar')
+def recuperarContraseña():
+    return render_template("recuperacion/Cambiar_Contraseña.html")
 
 if __name__ == '__main__':
     app.run(debug=True) 
