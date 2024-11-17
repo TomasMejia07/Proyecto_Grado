@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="/static/css/styledashboarAdmin.css">
+</head>
+<body>
+    <section>
+        <!-- MENU -->
+        <div class="nav">
+            <ul>
+                <li>
+                    <a href="">
+                        <span class="icono"><ion-icon name="logo-playstation"></ion-icon></span>
+                        <span class="titulo">Logo</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icono"><ion-icon name="home"></ion-icon></span>
+                        <span class="titulo">Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icono"><ion-icon name="list"></ion-icon></ion-icon></span>
+                        <span class="titulo">Categoria</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icono"><ion-icon name="create"></ion-icon></span>
+                        <span class="titulo">Pedidos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icono"><ion-icon name="fast-food"></ion-icon></span>
+                        <span class="titulo">Productos</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- FIN MENU -->
+        <!-- DASHBOARD -->
+        <div class="container">
+            <!-- BARRA SUPERIOR (TOPBAR) -->
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu"></ion-icon>
+                </div>
+                <div class="buscar">
+                    <label for="">
+                        <input type="text" placeholder="Buscar"> 
+                        <ion-icon name="search"></ion-icon>
+                    </label>
+                </div>
+                <div class="perfil-usuario">
+                    <img src="/static/img/Pepe.jfif" alt="">
+                    <!-- Menú desplegable -->
+                    <div class="menu-perfil">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <span class="icono-menu-user"><ion-icon name="person-circle"></ion-icon></span>
+                                    <span class="titulo">Cuenta</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icono-menu-user"><ion-icon name="cog"></ion-icon></span>
+                                    <span class="titulo">Configuraciones</span>
+                                </a>
+                            </li>
+                            <li>
+                                
+                                <a href="#">
+                                    <span class="icono-menu-user"><ion-icon name="log-out"></ion-icon></span>
+                                    <span class="titulo">Cerrar sesión</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- FIN DE LA TOPBAR -->
+            <!-- CARDS -->
+            <div class="cards">
+                <div class="card">
+                    <div>
+                        <span class="card-numeros">10</span>
+                        <span class="card-nombre">Pedidos en espera</span>
+                    </div>
+                    <div class="card-icono">
+                        <ion-icon name="time"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <span class="card-numeros">5</span>
+                        <span class="card-nombre">Pedidos en proceso</span>
+                    </div>
+                    <div class="card-icono">
+                        <ion-icon name="bicycle"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <span class="card-numeros">30</span>
+                        <span class="card-nombre">Pedidos Terminados</span>
+                    </div>
+                    <div class="card-icono">
+                        <ion-icon name="checkbox"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <span class="card-numeros">$500.000</span>
+                        <span class="card-nombre">Ventas de hoy</span>
+                    </div>
+                    <div class="card-icono">
+                        <ion-icon name="cash"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <!-- FIN DE LAS CARDS -->
+            <div class="detalles">
+
+            </div>
+        </div>
+    </section>
+    <!-- LIBRERIA DE ICONOS -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- LINK JS ADMIN -->
+    <script src="/static/js/dashboarAdmin.js"></script>
+
+
+</body>
+</html>

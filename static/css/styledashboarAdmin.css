@@ -1,0 +1,381 @@
+/* FUENTE MONTSERRAT LINK ;) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* COLORES DEL DASHBOARD*/
+:root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --white-red: #d85757;
+    --white-green: #7bb934;
+    --font:  "Montserrat", sans-serif;
+}
+
+/* GLOBAL STYLES */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+/* BODY */
+body{
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+/* SECTION */
+
+section{
+    position: relative;
+    width: 100%;   
+}
+
+/* MENU */
+.nav{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: var(--black);
+    border-left: 10px solid var(--black);
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.nav.active{
+    width: 80px;
+    
+}
+
+.nav ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+}
+
+.nav ul li{
+    position: relative;
+    width: 200%;
+    list-style: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.nav ul li:hover,
+.nav ul li.active{
+    background-color: var(--white);
+}
+
+.nav ul li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+
+.nav ul li a{
+    position: relative;
+    display: flex;
+    width: 100%;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.nav ul li:hover a,
+.nav ul li.active a{
+    color: var(--black);
+}
+
+.nav ul li a .icono{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 75px;
+    text-align: center;
+}
+
+.nav ul li a .icono ion-icon{
+    font-size: 1.75em;
+
+}
+
+.nav ul li a .titulo{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+
+}
+
+/* FIN DEL MENU */
+/* DASHBOARD */
+
+.container{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.4s;
+}
+
+.container.active{
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+/* TOPBAR */
+
+.container .topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.container .topbar .toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+.container .topbar .buscar{
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+
+.container .topbar .buscar label{
+    position: relative;
+    width: 100%;
+}
+
+.container .topbar .buscar label input{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    font-size: 1em;
+    outline: none;
+    border: 1px solid var(--black);
+}
+
+.container .topbar .buscar label ion-icon{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 1.2em;
+}
+
+.container .topbar .perfil-usuario{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: visible;
+    cursor: pointer;
+    
+}
+
+.container .topbar .perfil-usuario img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+/* MENU PERFIL USUARIO  */
+/* Estilo para el contenedor de la foto de perfil */
+.perfil-usuario {
+    position: relative;  /* Importante para que el menú se posicione correctamente */
+}
+
+/* Estilo del menú del perfil (inicialmente oculto) */
+.menu-perfil {
+    display: none; /* El menú está oculto por defecto */
+    position: absolute; /* Posiciona el menú respecto al contenedor */
+    top: 50px; /* Ajusta esto según lo necesario para posicionarlo debajo de la imagen */
+    right: 0;
+    background-color: var(--white);
+    box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.menu-perfil ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-perfil ul li {
+    display: flex;
+    align-items: center; /* Centra verticalmente el icono y el texto */
+    padding: 15px 20px;
+    font-size: 1.03em;
+}
+
+.menu-perfil ul li a {
+    display: flex;
+    align-items: center; /* Centra los elementos dentro del enlace */
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1em; /* Ajusta el tamaño de texto para que sea legible */
+}
+
+.menu-perfil ul li:hover {
+    background-color: var(--white-green);
+    color: var(--white);
+}
+
+.menu-perfil ul li a .icono-menu-user {
+    font-size: 1.5em; /* Ajusta el tamaño del icono para que sea visible */
+    margin-right: 10px; /* Añade un espacio entre el icono y el texto */
+}
+
+.menu-perfil ul li a .titulo {
+    position: relative;
+    top: -3px;
+}
+
+.menu-perfil ul li:hover a {
+    color: var(--white); /* Cambia el color del texto e ícono a blanco */
+}
+
+/* Mostrar el menú cuando la clase 'active' se aplique a .perfil-usuario */
+.perfil-usuario.active .menu-perfil {
+    display: block;
+}
+
+/* FIN MENU PERFIL DE USUARIO */
+
+/* FIN DEL TOPBAR */
+/* CARDS */
+
+.cards {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.cards .card {
+    position: relative;
+    background: var(--white);
+    padding: 30px;
+    box-shadow: 0 7px 25px rgba( 0, 0, 0, 0.08);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.cards .card:hover{
+    background-color: var(--white-green);
+}
+
+.cards .card .card-numeros{
+    position: relative;
+    font-weight: 700;
+    font-size: 2.5em;
+    color: var(--white-green);
+}
+
+.cards .card .card-nombre{
+    color: var(--black);
+    font-size: 1.1em;
+    margin-top: 5px;
+    margin-right: 80px;
+}
+
+.cards .card .card-icono {
+    font-size: 3.5em;
+    color: var(--black);
+
+}
+
+.cards .card:hover .card-numeros,
+.cards .card:hover .card-nombre,
+.cards .card:hover .card-icono{
+    color: var(--white);
+}
+
+/* FIN DE LAS CARDS */
+/* BREAKPOINTS */
+
+/* PANTALLA LARGA */
+@media only screen and (max-width: 1200px){
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* PANTALLA LAPTOPS */
+
+@media only screen and (max-width: 992px){
+    .nav{
+        left: -300px;
+
+    }
+    .nav.active{
+        left: 0;
+        width: 300px;
+    }
+    .container{
+        width: 100%;
+        left: 0;
+    }
+    .container.active{
+        left: 300px;
+    }
+}
+
+/* PANTALLA CELULAR */
+@media only screen and (max-width: 425px){
+    .nav{
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+    .nav.active{
+        left: 0;
+        width: 100%;
+    }  
+
+    .container.active .toggle{
+        color: var(--white);
+
+    }
+
+    .toggle{
+        position: fixed;
+        left: initial;
+        right: 0;
+        z-index: 10000;
+    } 
+    
+    .cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .perfil-usuario{
+        min-width: 40px;
+    }
+}
