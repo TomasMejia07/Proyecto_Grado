@@ -26,5 +26,9 @@ def recuperarContraseñaCodigo():
 def recuperarContraseña():
     return render_template("recuperacion/Cambiar_Contraseña.html")
 
+@app.route('/dashboard')
+def home():
+    return render_template("dashboard/dashboard.html")
+
 if __name__ == '__main__':
     app.run(debug=True) 
