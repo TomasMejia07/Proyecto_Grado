@@ -1,3 +1,16 @@
+:root{
+  --white-text: #c9c9c9; /* COLOR DE LA LETRA */
+  --white-icons: #e9e9e9; /* COLOR DE LOS ICONOS  */
+  --black: #13161C; /* COLOR DE LOS MENU Y DE LAS TABLAS Y TARJETAS */
+  --Gray: #272727; /* COLOR DEL CONTAINER  */
+  --Buton-color: #6366F1; /* COLOR DE LOS BOTONES DE LAS TABLAS Y LOS DEMAS BOTONES */
+  --Buton-hover-color: #5356F2; /* COLOR DE LOS HOVER DE LOS BOTONES */
+  --tabla-linea-color: #fff48d; /* COLOR DE LA RAYA DE LAS TABLAS */
+  --white-red: #d85757; /* POSIBLE COLOR DE LOS HOVERES ICONOS DE ELIMINAR */
+  --white-green: #e67e22; /* COLOR DE LOS HOVERS DE LAS TARJETAS POR EL MOMENTO */
+  --font:  "Montserrat", sans-serif; /* TIPO DE FUENTE */
+}
+
 body {
   margin-top: 8%;
   background-color: #13161C;
@@ -6,14 +19,14 @@ body {
 
 /* CONTENEDOR */
 .container {
-  border: 2px solid rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 30px;
   width: 400px;
+  min-width: 400;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 3px 5px 5px rgb(255, 255, 255);
 }
 
 /* FORMULARIO */
@@ -35,11 +48,27 @@ h3 {
   font-size: 22px;
 }
 
+p {
+  text-align: left;
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
+}
+
 
 /* BOTON */
 .btn {
-  width: 300px;
+  width: 100%;
   margin-bottom: 20px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+}
+
+.btnIngresar{
+  border-color: #fff48d !important;
+  height: 45px;
 }
 
 /* MENSAJE DE ERORR */
@@ -70,15 +99,14 @@ button {
 fieldset .j {
   display: flex;
   justify-content: center;
-  margin-top: -100px;
+  margin-top: -60px;
   margin-bottom: 20px;
 }
 
 /* IMAGEN DE USUARIO */
 .g { 
-  height: 150px;
-  width: 150px;
-
+  height: 120px;
+  width: 120px;
 }
 
 /* CONTENEDOR DE LOS INPUTS LABEL Y SPAN */
@@ -101,7 +129,7 @@ fieldset .j {
 /* INPUTS */
 .form-control-input {
   border: none;
-  border-bottom: 2px solid white;
+  border-bottom: 1px solid white;
   border-radius: 0;
   background-color: transparent;
   color: white;
@@ -110,7 +138,9 @@ fieldset .j {
   box-sizing: border-box;
   height: 100%;
   padding: 4px 20px 0;
-  width: 100%;
+  min-width: none;
+  width: 300px;
+  max-width: 300px;
   font-size: 14px;
 }
 
@@ -151,7 +181,9 @@ fieldset .j {
 .form-control-input:focus~.cut,
 .form-control-input:not(:placeholder-shown)~.cut {
   transform: translateY(10px);
-  background-color: #13161C;
+  background-color: var(--Gray);
+  width: 50%;
+
 }
 
 /* CLASE DE LOS LABEL */
@@ -191,8 +223,9 @@ fieldset .j {
 
 /* COLOR DEL BORDER CUANDO ESTA SELECIONADO EL INPUT */
 .form-control-input:focus {
-  border: 1px solid #0AE98A;
+  border: 1px solid #2D323A;
   border-radius: 10px;
+  
 }
 
 /* TAMPOCO SE PARA QEU SIRVE :P */
@@ -233,4 +266,18 @@ fieldset .j {
 .acepto {
   color: #fff;
 }
+
+.aRecuperar {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 13px;
+  color: #cccccc !important;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.aRecuperar:hover {
+  color: #ffffff !important;
+}
+
 

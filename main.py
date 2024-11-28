@@ -14,6 +14,14 @@ def correo():
 def user():
     return render_template("registration/user.html")
 
+@app.route('/hub/codigo')
+def codigo():
+    return render_template("registration/codigo.html")
+
+@app.route('/hub/contrasena')
+def contrasena():
+    return render_template("registration/contrasena.html")
+
 @app.route('/recuperacion')
 def recuperarContraseñaCorreo():
     return render_template("recuperacion/RecuperaC_correo.html")

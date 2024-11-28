@@ -16,23 +16,22 @@
             <div class="j">
                 <img class="g"  src="/static/img/user.png" alt="">
             </div>
-                <h3>Elige un nombre para ti</h3>
-                <h3>o para tu negocio</h3>
+                <h3>Crea una Contraseña</h3>
                 <div class="input-container ic1 form-floating mb-3">
                     <input type="text" class="form-control-input" id="nombre" placeholder="">
                     <div class="cut"></div>
-                    <label for="nombre" class="placeholder form-control-label">Nombre</label>
+                    <label for="nombre" class="placeholder form-control-label">Contraseña</label>
                     <br>
                     <span id="ErrorUsuario" class="error"></span>
                 </div>
                 <div class="input-container ic1 form-floating mb-3">
                     <input type="text" class="form-control-input" id="apellido" placeholder="">
                     <div class="cut"></div>
-                    <label for="apellido" class="placeholder form-control-label">Apellido</label>
+                    <label for="apellido" class="placeholder form-control-label">Repite la Contraseña</label>
                     <br>
                     <span id="ErrorUsuario" class="error"></span>
                 </div>
-                <a href="{{ url_for('codigo') }}" class="btn btn-outline-light">Continuar</a>
+                <a href="{{ url_for('home') }}" class="btn btn-outline-light">Continuar</a>
             </fieldset>
         </form>
     </div>
