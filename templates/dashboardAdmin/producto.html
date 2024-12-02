@@ -89,43 +89,46 @@
             </div>
             <main>
                 <!-- Contenido dinámico -->
-                <div class="cards">
-                    <div class="card">
-                        <div>
-                            <span class="card-numeros">10</span>
-                            <span class="card-nombre">Pedidos en espera</span>
+                <div class="container_tablas">
+                    <div class="table_Header">
+                        <h2>Productos</h2>
+                        <button class="boton_raro" onclick="location.href='/dashboardAdmin/crearProducto'" >Crear nuevo</button>
+                        <select class="select_tabla" name="" id="">
+                            <option value="" selected>Categoria</option>
+                            <option value="">Categoria 1</option>
+                            <option value="">Categoria 2</option>
+                        </select>
+                        <div class="input_search">
+                            <input type="search" placeholder="Buscar">
+                            <ion-icon id="search-sharp" name="search-sharp"></ion-icon>
                         </div>
-                        <div class="card-icono">
-                            <ion-icon name="time"></ion-icon>
-                        </div>
+                    </div> 
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nombre del producto<ion-icon name="chevron-expand-outline"></ion-icon></th>
+                                <th>Categoría<ion-icon name="chevron-expand-outline"></ion-icon></th>
+                                <th>Precio<ion-icon name="chevron-expand-outline"></ion-icon></th>
+                                <th>Descripcion<ion-icon name="chevron-expand-outline"></ion-icon></th>
+                                <th>Estado<ion-icon name="chevron-expand-outline"></ion-icon></th>
+                                <th>Operaciones<ion-icon name="chevron-expand-outline"></ion-icon></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Producto 1</td>
+                                <td>Categoría 1</td>
+                                <td>$100.00</td>
+                                <td>Descripción del producto 1</td>
+                                <td>Inactiva</td>
+                                <td>
+                                    <a href="#"><ion-icon id="iconosoperacion" name="pencil"></ion-icon></a>
+                                    <a href="#"><ion-icon id="iconosoperacion" name="trash"></ion-icon></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                     </div>
-                    <div class="card">
-                        <div>
-                            <span class="card-numeros">5</span>
-                            <span class="card-nombre">Pedidos en proceso</span>
-                        </div>
-                        <div class="card-icono">
-                            <ion-icon name="bicycle"></ion-icon>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div>
-                            <span class="card-numeros">30</span>
-                            <span class="card-nombre">Pedidos Terminados</span>
-                        </div>
-                        <div class="card-icono">
-                            <ion-icon name="checkbox"></ion-icon>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div>
-                            <span class="card-numeros">$500.000</span>
-                            <span class="card-nombre">Ventas de hoy</span>
-                        </div>
-                        <div class="card-icono">
-                            <ion-icon name="cash"></ion-icon>
-                        </div>
-                </div>                
                 <!-- Insertar contenido aquí -->
             </main>
         </div>

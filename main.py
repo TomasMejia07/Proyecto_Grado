@@ -34,9 +34,37 @@ def recuperarContraseñaCodigo():
 def recuperarContraseña():
     return render_template("recuperacion/Cambiar_Contraseña.html")
 
-@app.route('/dashboard')
+@app.route('/dashboardAdmin')
 def home():
-    return render_template("dashboard/dashboard.html")
+    return render_template("dashboardAdmin/dashboardAdmin.html")
+
+@app.route('/dashboardAdmin/categoria')
+def categoriaAd():
+    return render_template("dashboardAdmin/categoria.html")
+
+@app.route('/dashboardAdmin/producto')
+def productoAd():
+    return render_template("dashboardAdmin/producto.html")
+
+@app.route('/dashboardAdmin/usuario')
+def usuarioAd():
+    return render_template("dashboardAdmin/usuario.html")
+
+@app.route('/dashboardAdmin/pedido')
+def pedidoAd():
+    return render_template("dashboardAdmin/pedido.html")
+
+@app.route('/dashboardAdmin/crearCategoria')
+def crearCategoriaAd():
+    return render_template("dashboardAdmin/crearCategoria.html")
+
+@app.route('/dashboardAdmin/crearProducto')
+def crearProductoAd():
+    return render_template("dashboardAdmin/crearProducto.html")
+
+@app.route('/dashboardAdmin/crearUsuario')
+def crearUsuarioAd():
+    return render_template("dashboardAdmin/crearUsuario.html")
 
 if __name__ == '__main__':
     app.run(debug=True) 

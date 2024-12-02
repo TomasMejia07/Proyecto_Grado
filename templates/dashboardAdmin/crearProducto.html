@@ -89,43 +89,36 @@
             </div>
             <main>
                 <!-- Contenido dinámico -->
-                <div class="cards">
-                    <div class="card">
-                        <div>
-                            <span class="card-numeros">10</span>
-                            <span class="card-nombre">Pedidos en espera</span>
-                        </div>
-                        <div class="card-icono">
-                            <ion-icon name="time"></ion-icon>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div>
-                            <span class="card-numeros">5</span>
-                            <span class="card-nombre">Pedidos en proceso</span>
-                        </div>
-                        <div class="card-icono">
-                            <ion-icon name="bicycle"></ion-icon>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div>
-                            <span class="card-numeros">30</span>
-                            <span class="card-nombre">Pedidos Terminados</span>
-                        </div>
-                        <div class="card-icono">
-                            <ion-icon name="checkbox"></ion-icon>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div>
-                            <span class="card-numeros">$500.000</span>
-                            <span class="card-nombre">Ventas de hoy</span>
-                        </div>
-                        <div class="card-icono">
-                            <ion-icon name="cash"></ion-icon>
-                        </div>
-                </div>                
+                <div class="container_formulario">
+                    <form action="">
+                        <fieldset>
+                            <h2>Crear Producto</h2>
+                
+                            <div class="inputs_formulario1">
+                                <label for="nombre">Nombre De La Categoria</label>
+                                <input type="text" name="nombre" id="nombre">
+                
+                                <span id="" class="error"></span>
+                            </div>
+                
+                            <div class="inputs_formulario">
+                                <label for="estado">Estado</label>
+                                <select name="estado" id="estado">
+                                    <option value="" selected>Activo</option>
+                                    <option value="">Inactivo</option>
+                                </select>
+                
+                                <span id="" class="error"></span>
+                            </div>
+                
+                            <div class="botones_formulario">
+                                <button type="submit" class="boton_formulario">Crear</button>
+                                <button type="reset" class="boton_formulario boton_cancelar">Cancelar</button>
+                            </div>
+                
+                        </fieldset>
+                    </form>
+                </div>
                 <!-- Insertar contenido aquí -->
             </main>
         </div>
